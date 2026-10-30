@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const data = [
+    {
+    "name": "Bill Gates",
+    "rank": 1,
+    "year": 1996,
+    "company": {
+      "founded": 1975,
+      "name": "Microsoft",
+      "relationship": "founder",
+      "sector": "Software",
+      "type": "new"
+    },
+    "demographics": {
+      "age": 40,
+      "gender": "male"
+    },
+    "location": {
+      "citizenship": "United States",
+      "country code": "USA",
+      "gdp": 8100000000000.0,
+      "region": "North America"
+    },
+    "wealth": {
+      "type": "founder non-finance",
+      "worth in billions": 18.5,
+      "how": {
+        "category": "New Sectors",
+        "from emerging": true,
+        "industry": "Technology-Computer",
+        "inherited": "not inherited",
+        "was founder": true,
+        "was political": true
+      }
+    }
+  },
+  {
+    "name": "Bill Gates",
+    "rank": 1,
+    "year": 2001,
+    "company": {
+      "founded": 1975,
+      "name": "Microsoft",
+      "relationship": "founder",
+      "sector": "Software",
+      "type": "new"
+    },
+    "demographics": {
+      "age": 45,
+      "gender": "male"
+    },
+    "location": {
+      "citizenship": "United States",
+      "country code": "USA",
+      "gdp": 10600000000000.0,
+      "region": "North America"
+    },
+    "wealth": {
+      "type": "founder non-finance",
+      "worth in billions": 58.7,
+      "how": {
+        "category": "New Sectors",
+        "from emerging": true,
+        "industry": "Technology-Computer",
+        "inherited": "not inherited",
+        "was founder": true,
+        "was political": true
+      }
+    }
+  },
+  {
+    "name": "Bill Gates",
+    "rank": 1,
+    "year": 2014,
+    "company": {
+      "founded": 1975,
+      "name": "Microsoft",
+      "relationship": "founder",
+      "sector": "Software",
+      "type": "new"
+    },
+    "demographics": {
+      "age": 58,
+      "gender": "male"
+    },
+    "location": {
+      "citizenship": "United States",
+      "country code": "USA",
+      "gdp": 0.0,
+      "region": "North America"
+    },
+    "wealth": {
+      "type": "founder non-finance",
+      "worth in billions": 76.0,
+      "how": {
+        "category": "New Sectors",
+        "from emerging": true,
+        "industry": "Technology-Computer",
+        "inherited": "not inherited",
+        "was founder": true,
+        "was political": true
+      }
+    }
+  },
+  {
+    "name": "Warren Buffett",
+    "rank": 2,
+    "year": 1996,
+    "company": {
+      "founded": 1962,
+      "name": "Berkshire Hathaway",
+      "relationship": "founder",
+      "sector": "Finance",
+      "type": "new"
+    },
+    "demographics": {
+      "age": 65,
+      "gender": "male"
+    },
+    "location": {
+      "citizenship": "United States",
+      "country code": "USA",
+      "gdp": 8100000000000.0,
+      "region": "North America"
+    },
+    "wealth": {
+      "type": "founder non-finance",
+      "worth in billions": 15.0,
+      "how": {
+        "category": "Traded Sectors",
+        "from emerging": true,
+        "industry": "Consumer",
+        "inherited": "not inherited",
+        "was founder": true,
+        "was political": true
+      }
+    }
+  },
+  {
+    "name": "Warren Buffett",
+    "rank": 2,
+    "year": 2001,
+    "company": {
+      "founded": 1962,
+      "name": "Berkshire Hathaway",
+      "relationship": "founder",
+      "sector": "Finance",
+      "type": "new"
+    },
+    "demographics": {
+      "age": 70,
+      "gender": "male"
+    },
+    "location": {
+      "citizenship": "United States",
+      "country code": "USA",
+      "gdp": 10600000000000.0,
+      "region": "North America"
+    },
+    "wealth": {
+      "type": "founder non-finance",
+      "worth in billions": 32.3,
+      "how": {
+        "category": "Traded Sectors",
+        "from emerging": true,
+        "industry": "Consumer",
+        "inherited": "not inherited",
+        "was founder": true,
+        "was political": true
+      }
+    }
+  },
+  {
+    "name": "Carlos Slim Helu",
+    "rank": 2,
+    "year": 2014,
+    "company": {
+      "founded": 1990,
+      "name": "Telmex",
+      "relationship": "founder",
+      "sector": "Communications",
+      "type": "privatization"
+    },
+    "demographics": {
+      "age": 74,
+      "gender": "male"
+    },
+    "location": {
+      "citizenship": "Mexico",
+      "country code": "MEX",
+      "gdp": 0.0,
+      "region": "Latin America"
+    },
+    "wealth": {
+      "type": "privatized and resources",
+      "worth in billions": 72.0,
+      "how": {
+        "category": "Non-Traded Sectors",
+        "from emerging": true,
+        "industry": "Media",
+        "inherited": "not inherited",
+        "was founder": true,
+        "was political": true
+      }
+    }
+  },
+  {
+    "name": "Oeri Hoffman and Sacher",
+    "rank": 3,
+    "year": 1996,
+    "company": {
+      "founded": 1896,
+      "name": "F. Hoffmann-La Roche",
+      "relationship": "",
+      "sector": "pharmaceuticals",
+      "type": "new"
+    },
+    "demographics": {
+      "age": 0,
+      "gender": ""
+    },
+    "location": {
+      "citizenship": "Switzerland",
+      "country code": "CHE",
+      "gdp": 330000000000.0,
+      "region": "Europe"
+    },
+    "wealth": {
+      "type": "inherited",
+      "worth in billions": 13.1,
+      "how": {
+        "category": "New Sectors",
+        "from emerging": true,
+        "industry": "Technology-Medical",
+        "inherited": "3rd generation",
+        "was founder": true,
+        "was political": true
+      }
+    }
+  }
+]
+
+
+    </script>
+    <style>
+        table{
+            border: 20px solid black;
+        }
+        
+        .container {
+            border: 1px solid #ccc;    
+            border-collapse: collapse;    
+            
+        }
+
+     
+        
+    </style>
+</head>
+<body>
+    <table class="container">
+        <thead class="container">
+            <tr>
+            <th>Name</th>
+            <th>Founded Year</th>
+             <th>Name of Company</th>
+             <th>Relationship</th>
+            <th>Citinzenship</th>
+            <th>worth in billions</th>
+            <th>Industry</th>
+                </tr>
+        </thead>
+        <tbody id="table-body" class="container">
+
+        </tbody>
+
+    </table>
+
+    <script>
+        let htmlcontent = "";
+        for(let i=0;i<data.length;i++){
+            let item=data[i];
+            
+            htmlcontent += "<tr>";
+            htmlcontent += "<td>" + item.name +" </td>";
+            htmlcontent += "<td>" + item.company.founded +" </td>";
+            htmlcontent += "<td>" + item.company.name +" </td>";
+            htmlcontent += "<td>" + (item.company.relationship || "-" ) +" </td>";
+            htmlcontent += "<td>$" + item.wealth['worth in billions'] +" B</td>";
+            htmlcontent += "<td>" + item.wealth.how.industry +" </td>";
+            htmlcontent += "<td>" + item.location.citizenship + "</td>";
+            htmlcontent += "</tr>";  
+
+        }
+
+        document.getElementById("table-body").innerHTML = htmlcontent;
+        
+        
+
+    </script>
+</body>
+</html>

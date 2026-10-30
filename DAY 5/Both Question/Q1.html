@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <script>
+      
+       function Employee(name,email,salary,department,calculatetax){
+        this.name=name;
+        this.email=email;
+        this.salary=Number(salary);
+        this.department=department
+     
+       this.calculatetax=function(){
+        const yearSalary=this.salary * 12;
+        return yearSalary>60000?yearSalary * 0.10 :yearSalary * 0.05;
+       }
+       this.calculatetax= this.calculatetax(); }
+   
+    function handlesubmit(event){
+        
+        const name=document.getElementById("name").value;
+        const email =document.getElementById("email").value;
+        const salary =document.getElementById("Salary").value;
+        const depart=document.getElementById("dep").value;
+           const emp = new Employee(name, email, salary, depart);
+            console.log("Employee Object:", emp);
+           
+    }
+         
+       
+    </script>
+</head>
+<body>
+    <h1>Employee Form</h1>
+    <form onsubmit="handlesubmit(event)" >
+        <label for="name"> NAME :</label>
+        <input type="text" id="name" placeholder="Enter name">
+        <br>
+        <label for="email" > EMAIL: :</label>
+        <input type="email" id="email" placeholder="Enter email">
+        <br>
+        <Label for="Salary">Salary :</Label>
+        <input type="number"  id="Salary" placeholder="Enter Salary">
+        <br>
+        <label for="dep">department :</label>
+        <input type="text" id="dep" placeholder="Enter department">
+        <br>
+       <button type="submit">Submit</button>
+
+
+    </form>
+</body>
+</html>

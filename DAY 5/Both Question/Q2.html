@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Student{
+            constructor(name,email,department,dob,marks){
+                this.name = name;
+                this.email = email;
+                this.department = department;
+                this.dob = dob;
+                this.marks = marks;
+                
+                this.calculateTotalMarks = function(){
+                    return this.marks.reduce((total,item) => 
+                        total + Number(item.mark) , 0);
+                    };
+
+                this.calculateTotalMarks = this.calculateTotalMarks();
+                }   
+            }
+
+            function handleSubmit(event){
+                event.preventDefault();
+                const name = document.getElementById("name").value;
+                const mail = document.getElementById("email").value;
+                const department = document.getElementById("department").value;
+                const dob = document.getElementById("dob").value;
+                const marksArray = [
+                    
+                    {subject: document.getElementById("sub1").value , mark : document.getElementById("mark1").value}, 
+                    {subject: document.getElementById("sub2").value , mark : document.getElementById("mark2").value},
+                    {subject: document.getElementById("sub3").value , mark : document.getElementById("mark3").value}
+                    
+                ]
+
+                const student1 = new Student(name ,mail , department, dob, marksArray);
+
+                console.log("Student Object:", student1);
+            }
+         
+
+
+        
+
+    </script>
+</head>
+<body>
+    <h2>Student Registration Form</h2>
+    
+    <form onsubmit="handleSubmit(event)">
+        <label>Name:</label>
+        <input type="text" id="name" required><br>
+
+        <label>Email:</label>
+        <input type="email" id="email" required><br>
+
+        <label>Department:</label>
+        <input type="text" id="department" required><br>
+
+        <label>Date of Birth:</label>
+        <input type="date" id="dob" required><br>
+
+        <h3>Subject Marks</h3>
+        
+        <label for="sub1">Name of Subject 1 : </label>
+        <input type="text" id="sub1" placeholder="Subject 1 Name">
+        <label for="mark1">Marks : </label>
+        <input type="number" id="mark1" placeholder="Mark" ><br>
+
+        <label for="sub2">Name of Subject 2 : </label>
+        <input type="text" id="sub2" placeholder="Subject 2 Name">
+        <label for="mark2">Marks : </label>
+        <input type="number" id="mark2" placeholder="Mark" ><br>
+
+         <label for="sub3">Name of Subject 3 : </label>
+        <input type="text" id="sub3" placeholder="Subject 3 Name">
+         <label for="mark3">Marks : </label>
+        <input type="number" id="mark3" placeholder="Mark" ><br>
+
+        <button type="submit">Create Student</button>
+    </form>
+</body>
+</html>
